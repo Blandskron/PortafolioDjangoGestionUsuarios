@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio - {{ nombre_aplicacion }}</title>
+    <!-- Agrega aquí tus etiquetas de estilo CSS si las necesitas -->
+</head>
+<body>
+    <header>
+        <h1>Bienvenido</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'index' %}">Inicio</a></li>
+            <li><a href="{% url 'lista_usuarios' %}">Lista de Usuarios</a></li>
+            <li><a href="{% url 'crear_usuario' %}">Crear Usuario</a></li>
+            <li><a href="{% url 'crear_grupo' %}">Crear Grupo</a></li>
+            <li><a href="{% url 'lista_grupos' %}">Lista de Grupos</a></li>
+        </ul>
+    </nav>
+    <main>
+        <p>Esta es la página de inicio de la aplicación.</p>
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

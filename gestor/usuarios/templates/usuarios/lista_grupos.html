@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Grupos</title>
+</head>
+<body>
+    <h1>Lista de Grupos</h1>
+    <ul>
+        {% for grupo in grupos %}
+            <li>
+                {{ grupo.name }} - 
+                <a href="{% url 'eliminar_grupo' grupo_id=grupo.id %}">Eliminar</a> | 
+                <a href="{% url 'editar_grupo' grupo_id=grupo.id %}">Editar</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <li><a href="{% url 'index' %}">Inicio</a></li>
+</body>
+</html>
